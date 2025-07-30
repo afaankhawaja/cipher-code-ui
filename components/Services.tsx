@@ -33,7 +33,7 @@ const Services = () => {
     <section className="min-h-full">
       <h1
         id="title"
-        className="text-[64px] text-center text-black left-[50%] mb-2"
+        className="text-[64px] font-bold text-center text-black left-[50%] mb-2"
       >
         Services
       </h1>

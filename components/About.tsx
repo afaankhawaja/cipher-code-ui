@@ -2,11 +2,20 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Milestone } from "lucide-react";
 import React, { useRef } from "react";
 
 const About = () => {
   const aboutRef = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
+  const textTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text1",
+      scrub: 1,
+      end: "bottom 50%",
+    },
+  });
+
   useGSAP(() => {
     gsap.fromTo(
       aboutRef.current,
@@ -22,6 +31,26 @@ const About = () => {
         },
       },
     );
+    textTimeline.fromTo(
+      ".text1",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 1 },
+    );
+    textTimeline.fromTo(
+      ".text2",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 1 },
+    );
+    textTimeline.fromTo(
+      ".text3",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 0.2 },
+    );
+    textTimeline.fromTo(
+      ".text4",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 0.2 },
+    );
   });
   return (
     <div className="w-screen h-screen bg-black">
@@ -32,6 +61,22 @@ const About = () => {
       >
         About US
       </div>
+      <ul className="text-white text-[20px] font-semibold leading-8 pl-10 pt-16 italic">
+        {" "}
+        {[
+          `We deliver exceptional user experiences for web and mobile applications .`,
+          `Our expert UI/UX design seamlessly integrates
+          with`,
+          `full-stack development for both web and mobile platforms, creating`,
+          `powerful and intuitive digital solutions.`,
+        ].map((ct, i) => {
+          return (
+            <li key={i} className="flex items-center gap-2 mt-4">
+              <Milestone /> <span className={`text${i}`}>{ct}</span>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
