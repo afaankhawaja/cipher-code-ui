@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(SplitText);
@@ -32,17 +31,15 @@ const Hero = () => {
   }, []);
 
   useGSAP(() => {
-      const timeline = gsap.timeline();
-      const tl = gsap.timeline({ paused: true });
+    const timeline = gsap.timeline();
 
-    // Normal entrance animations
     timeline.to("#headings", { y: 200, duration: 1, ease: "bounce" });
     timeline.to("#h1", { fontSize: 50, fontWeight: "bold" });
     timeline.to("#h2", {
       fontSize: 30,
       color: "#a5a5a5",
-        fontWeight: "bold",
-      marginTop:'15px'
+      fontWeight: "bold",
+      marginTop: "15px",
     });
     timeline.to("#h3", {
       fontSize: 22,
@@ -54,22 +51,21 @@ const Hero = () => {
     timeline.fromTo(
       "#downArrow",
       { y: 0 },
-      { y: 50, yoyo: true, duration: 0.4 }
+      { y: 50, yoyo: true, duration: 0.4 },
     );
-    
-      gsap.to("#downArrow", {
-        scrollTrigger: {
-          trigger: "#downArrow",
-          start: "top 60%",
-          end: "+=500px",
-          scrub: true,
-          markers: true,
-        },
-        rotate: 220,
-        y: 340,
-        x: -200,
-        ease: "none",
-      });
+
+    gsap.to("#downArrow", {
+      scrollTrigger: {
+        trigger: "#downArrow",
+        start: "top 60%",
+        end: "+=500px",
+        scrub: true,
+      },
+      rotate: 220,
+      y: 340,
+      x: -200,
+      ease: "none",
+    });
   });
 
   return (

@@ -8,7 +8,6 @@ const About = () => {
   const aboutRef = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-
     gsap.fromTo(
       aboutRef.current,
       { opacity: 0, y: 50 },
@@ -19,9 +18,9 @@ const About = () => {
         scrollTrigger: {
           trigger: aboutRef.current,
           start: "top 80%",
-          scrub:true,
+          scrub: true,
         },
-      }
+      },
     );
   });
   return (

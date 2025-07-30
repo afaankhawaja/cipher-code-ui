@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
     >
       <div className="mt-0">
         <Hero />
-        <About/>
+        <About />
+        <Services />
       </div>
     </div>
   );
