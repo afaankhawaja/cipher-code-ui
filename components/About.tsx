@@ -12,7 +12,7 @@ const About = () => {
     scrollTrigger: {
       trigger: ".text1",
       scrub: 1,
-      end: "bottom 50%",
+      end: "bottom 40%",
     },
   });
 
@@ -29,27 +29,42 @@ const About = () => {
           start: "top 80%",
           scrub: true,
         },
-      },
+      }
     );
     textTimeline.fromTo(
       ".text1",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1 },
+      { opacity: 1, x: 0, duration: 1 }
     );
     textTimeline.fromTo(
       ".text2",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1 },
+      { opacity: 1, x: 0, duration: 1 }
     );
     textTimeline.fromTo(
       ".text3",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 },
+      { opacity: 1, x: 0, duration: 0.2 }
     );
     textTimeline.fromTo(
       ".text4",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 },
+      { opacity: 1, x: 0, duration: 0.2 }
+    );
+    textTimeline.fromTo(
+      ".text5",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 0.2 }
+    );
+    textTimeline.fromTo(
+      ".text6",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 0.2 }
+    );
+    textTimeline.fromTo(
+      ".text7",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 0.2 }
     );
   });
   return (
@@ -69,6 +84,9 @@ const About = () => {
           with`,
           `full-stack development for both web and mobile platforms, creating`,
           `powerful and intuitive digital solutions.`,
+          `With a focus on innovation and quality,`,
+          `we bring your ideas to life`,
+          `Let’s build something amazing together!`,
         ].map((ct, i) => {
           return (
             <li key={i} className="flex items-center gap-2 mt-4">
