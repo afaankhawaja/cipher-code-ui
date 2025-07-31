@@ -29,42 +29,42 @@ const About = () => {
           start: "top 80%",
           scrub: true,
         },
-      }
+      },
     );
     textTimeline.fromTo(
       ".text1",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1 }
+      { opacity: 1, x: 0, duration: 1 },
     );
     textTimeline.fromTo(
       ".text2",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1 }
+      { opacity: 1, x: 0, duration: 1 },
     );
     textTimeline.fromTo(
       ".text3",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 }
+      { opacity: 1, x: 0, duration: 0.2 },
     );
     textTimeline.fromTo(
       ".text4",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 }
+      { opacity: 1, x: 0, duration: 0.2 },
     );
     textTimeline.fromTo(
       ".text5",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 }
+      { opacity: 1, x: 0, duration: 0.2 },
     );
     textTimeline.fromTo(
       ".text6",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 }
+      { opacity: 1, x: 0, duration: 0.2 },
     );
     textTimeline.fromTo(
       ".text7",
       { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.2 }
+      { opacity: 1, x: 0, duration: 0.2 },
     );
   });
   return (
