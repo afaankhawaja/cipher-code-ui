@@ -47,12 +47,12 @@ const Hero = () => {
       color: "#ADADAD",
       marginTop: "10px",
     });
-    // timeline.to("#downArrow", { scaleY: 2 });
-    // timeline.fromTo(
-    //   "#downArrow",
-    //   { y: 0 },
-    //   { y: 50, yoyo: true, duration: 0.4 },
-    // );
+    timeline.to("#downArrow", { scaleY: 2 });
+    timeline.fromTo(
+      "#downArrow",
+      { y: 0 },
+      { y: 50, yoyo: true, duration: 0.4 },
+    );
 
     gsap.to("#downArrow", {
       scrollTrigger: {
@@ -70,7 +70,7 @@ const Hero = () => {
   });
 
   return (
-    <div className=" text-white h-screen">
+    <div id="hero" className=" text-white h-screen">
       <div className="flex w-[100%] h-[100%]">
         <div
           id="headings"

@@ -30,7 +30,7 @@ const Services = () => {
   });
 
   return (
-    <section className="min-h-full w-full overflow-hidden">
+    <section id="service" className="min-h-full w-full overflow-hidden">
       <h1
         id="title"
         className="text-[64px] font-bold text-center text-black left-[50%] mb-2"
