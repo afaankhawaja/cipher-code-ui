@@ -22,15 +22,15 @@ export default function Projects() {
         y: 300,
       },
       {
-        y: -600,
-        left: 5,
+        y: -500,
+        left: 15,
       },
     );
     tl.fromTo(
       "#proj2",
       {
         y: 300,
-        right: 5,
+        right: 15,
       },
       {
         y: -400,
@@ -42,15 +42,15 @@ export default function Projects() {
         y: 300,
       },
       {
-        y: -200,
-        left: 5,
+        y: -170,
+        left: 15,
       },
     );
     tl.fromTo(
       "#proj4",
       {
         y: 50,
-        right: 5,
+        right: 15,
       },
       {
         y: -300,
@@ -61,9 +61,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative h-screen w-screen bg-amber-100 overflow-hidden"
+      className="relative h-screen w-full max-w-full bg-black/90 overflow-hidden"
     >
-      <h1 className="absolute left-1/2 top-1/2 transform font-bold text-gray-500 -translate-x-1/2 text-5xl">
+      <h1 className="absolute left-1/2 top-1/2 transform font-bold text-white  -translate-x-1/2 text-5xl">
         Projects
       </h1>
       {[1, 2, 3, 4].map((i) => (
@@ -73,7 +73,7 @@ export default function Projects() {
           src={`/project${i}.jpg`}
           width={350}
           height={150}
-          className="absolute bottom-0"
+          className="absolute bottom-0 rounded-xl"
           alt={`proj${i}`}
         />
       ))}

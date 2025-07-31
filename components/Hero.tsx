@@ -47,12 +47,12 @@ const Hero = () => {
       color: "#ADADAD",
       marginTop: "10px",
     });
-    timeline.to("#downArrow", { scaleY: 2 });
-    timeline.fromTo(
-      "#downArrow",
-      { y: 0 },
-      { y: 50, yoyo: true, duration: 0.4 },
-    );
+    // timeline.to("#downArrow", { scaleY: 2 });
+    // timeline.fromTo(
+    //   "#downArrow",
+    //   { y: 0 },
+    //   { y: 50, yoyo: true, duration: 0.4 },
+    // );
 
     gsap.to("#downArrow", {
       scrollTrigger: {
@@ -61,10 +61,11 @@ const Hero = () => {
         end: "+=500px",
         scrub: true,
       },
+      scaleY: 2 ,
       rotate: 220,
       y: 340,
       x: -200,
-      ease: "none",
+      // ease: "none",
     });
   });
 

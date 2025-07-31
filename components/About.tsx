@@ -68,7 +68,7 @@ const About = () => {
     );
   });
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="w-full h-screen bg-black">
       <div
         id="about"
         ref={aboutRef}

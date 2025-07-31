@@ -11,16 +11,14 @@ export default function Home() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        width: "100vw",
-        height: "100vh",
+        maxWidth: "100dvw",
+        maxHeight: "100dvh",
       }}
     >
-      <div className="mt-0">
-        <Hero />
-        <About />
-        <Services />
-        <Projects />
-      </div>
+      <Hero />
+      <About />
+      <Services />
+      <Projects />
     </div>
   );
 }
